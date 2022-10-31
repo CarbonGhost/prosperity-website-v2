@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base ***********************************************************************/
+
+body {
+	@apply bg-zinc-800 text-zinc-300;
+}
+
+a {
+	@apply hover:underline text-amber-400;
+}
+
+/* classes ********************************************************************/
+
+.standard-width {
+	@apply container px-8 mx-auto;
+}
