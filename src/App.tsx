@@ -10,7 +10,7 @@ import Wiki from "./pages/Wiki"
  */
 export default function App() {
 	return (
-		<>
+		<>	
 			<Navigation />
 			<div class="mt-28">
 				<Routes>

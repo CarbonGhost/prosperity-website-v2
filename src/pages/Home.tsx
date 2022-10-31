@@ -1,10 +1,13 @@
+import Button from "../components/button"
+import DynamicLink from "../components/DynamicLink"
+
 /**
  * Home page.
  */
 export default function Home() {
 	return (
 		<>
-			<div class="flex h-[60vh] standard-width">
+			<div class="flex h-[52rem] standard-width">
 				<div class="h-96 w-1/2 flex-col self-center">
 					<header class="text-6xl font-bold font-display text-zinc-200 mb-4">
 						This is Prosperity.
@@ -18,12 +21,12 @@ export default function Home() {
 						pay-to-win, or claims, and never will.
 					</p>
 					<div class="flex gap-12">
-						<button class="bg-zinc-800 border-2 border-amber-400 text-amber-400 px-10 py-1.5 rounded-md shadow-amber-400/20 shadow-md font-semibold">
-							Join The Server
-						</button>
-						<a class="self-center" href="/">
+						<Button>Join The Server</Button>
+						<DynamicLink
+							href="https://youtube.com"
+							class="self-center">
 							Watch The Trailer
-						</a>
+						</DynamicLink>
 					</div>
 				</div>
 			</div>
@@ -41,7 +44,7 @@ export default function Home() {
 						for benchmarking and testing farms and Redstone. Filled
 						with skilled Redstone engineers already, this server has
 						been the birthplace for several new advances in item
-						tech and more
+						tech and more.
 					</p>
 					<br />
 					<header class="text-3xl font-bold font-display text-zinc-200 mb-4 text-center">
@@ -59,33 +62,30 @@ export default function Home() {
 						creative server with WorldEdit where you can work on and
 						show off your build concepts.
 					</p>
+					<br />
+					<header class="text-3xl font-bold font-display text-zinc-200 mb-4 text-center">
+						Community Focused.
+					</header>
+					<p class="w-3/4 text-center mx-auto">
+						The importance of a community to a server can't be
+						understated. Prosperity has a welcoming and talented
+						community of people from all walks of life. While the
+						server isn't the largest, you can expect people who are
+						willing to collaborate and ensure you get a great
+						experience on the server. In-addition to a good
+						community, good administration goes hand-in-hand. Admins
+						and moderators should serve and engage with the
+						community without creating an environment that's
+						suffocatingly strict or allows toxicity to take root. We
+						understand that this is a place where you will
+						potentially invest hundreds to thousands of hours and
+						take pains to be transparent and ensure suggestions are
+						taken seriously.
+					</p>
 				</div>
 			</div>
 			<div class="standard-width py-12">
 				<div class="grid grid-cols-2 gap-12">
-					<div>
-						<header class="text-3xl font-bold font-display text-zinc-200 mb-4">
-							Community Focused.
-						</header>
-						<p>
-							The importance of a community to a server can't be
-							understated. Prosperity has a welcoming and talented
-							community of people from all walks of life. While
-							the server isn't the largest, you can expect people
-							who are willing to collaborate and ensure you get a
-							great experience on the server. In-addition to a
-							good community, good administration goes
-							hand-in-hand. Admins and moderators should serve and
-							engage with the community without creating an
-							environment that's suffocatingly strict or allows
-							toxicity to take root. We understand that this is a
-							place where you will potentially invest hundreds to
-							thousands of hours and take pains to be transparent
-							and ensure suggestions are taken seriously.
-						</p>
-					</div>
-					<div />
-					<div />
 					<div>
 						<header class="text-3xl font-bold font-display text-zinc-200 mb-4">
 							Fast and Reliable.
@@ -105,6 +105,7 @@ export default function Home() {
 							progress is safe.
 						</p>
 					</div>
+					<div />
 				</div>
 			</div>
 		</>
