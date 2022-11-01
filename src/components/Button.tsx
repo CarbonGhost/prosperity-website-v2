@@ -10,7 +10,7 @@ import { JSX } from "solid-js/jsx-runtime"
 export default function Button(props: ButtonProps) {
 	props = mergeProps(
 		{
-			class: "bg-zinc-800 border-2 border-amber-400 text-amber-400 px-10 py-1.5 rounded-md shadow-amber-400/20 hover:shadow-amber-400/40 shadow-md font-semibold duration-150"
+			class: "bg-[#3b3523] button-background border border-amber-400 text-amber-400 px-10 py-1.5 rounded shadow-amber-400/20 hover:shadow-amber-400/40 shadow-md font-semibold duration-150"
 		},
 		props
 	)

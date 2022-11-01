@@ -7,32 +7,35 @@ import DynamicLink from "../components/DynamicLink"
 export default function Home() {
 	return (
 		<>
-			<div class="flex h-[52rem] standard-width">
-				<div class="h-96 md:w-2/3 lg:w-1/2 flex-col self-center">
-					<header class="text-6xl font-bold font-display text-zinc-200 mb-4">
-						This is Prosperity.
-					</header>
-					<p class="mb-10">
-						Prosperity is a survival-multiplayer server focused on
-						bringing skilled builders and technical players together
-						to make the most out of Minecraft. At the core of
-						Prosperity is the classic SMP experience, we don't have
-						any unnecessary hub worlds, shop plugins, MMO mechanics,
-						pay-to-win, or claims, and never will.
-					</p>
-					<div class="flex gap-12">
-						<Button>Join The Server</Button>
-						<DynamicLink
-							href="https://youtube.com"
-							class="self-center">
-							Watch The Trailer
-						</DynamicLink>
+			<div class="main-background">
+				<div class="flex h-[52rem] standard-width">
+					<div class="h-96 md:w-2/3 lg:w-1/2 flex-col self-center">
+						<header class="text-6xl font-bold font-display text-zinc-200 mb-4 md:whitespace-nowrap">
+							This is Prosperity.
+						</header>
+						<p class="mb-10">
+							Prosperity is a survival-multiplayer server focused
+							on bringing skilled builders and technical players
+							together to make the most out of Minecraft. At the
+							core of Prosperity is the classic SMP experience, we
+							don't have any unnecessary hub worlds, shop plugins,
+							MMO mechanics, pay-to-win, or claims, and never
+							will.
+						</p>
+						<div class="flex gap-12">
+							<Button>Join The Server</Button>
+							<DynamicLink
+								href="https://youtube.com"
+								class="self-center">
+								Watch The Trailer
+							</DynamicLink>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="py-12 bg-zinc-700 border-t border-b border-zinc-500 w-full m-0 p-0">
 				<div class="standard-width">
-					<header class="text-3xl font-bold font-display text-zinc-200 mb-4 text-center">
+					<header class="text-4xl font-bold font-display text-zinc-200 mb-4 text-center">
 						Expanding The Minds Of Engineers.
 					</header>
 					<p class="lg:w-3/4 text-center mx-auto">
@@ -47,7 +50,7 @@ export default function Home() {
 						tech and more.
 					</p>
 					<br />
-					<header class="text-3xl font-bold font-display text-zinc-200 mb-4 text-center">
+					<header class="text-4xl font-bold font-display text-zinc-200 mb-4 text-center">
 						An Architect's Playground.
 					</header>
 					<p class="lg:w-3/4 text-center mx-auto">
@@ -63,7 +66,7 @@ export default function Home() {
 						show off your build concepts.
 					</p>
 					<br />
-					<header class="text-3xl font-bold font-display text-zinc-200 mb-4 text-center">
+					<header class="text-4xl font-bold font-display text-zinc-200 mb-4 text-center">
 						Community Focused.
 					</header>
 					<p class="lg:w-3/4 text-center mx-auto">
@@ -87,7 +90,7 @@ export default function Home() {
 			<div class="standard-width py-12">
 				<div class="md:grid md:grid-cols-2 gap-12">
 					<div>
-						<header class="text-3xl font-bold font-display text-zinc-200 mb-4">
+						<header class="text-4xl font-bold font-display text-zinc-200 mb-4">
 							Fast and Reliable.
 						</header>
 						<p>

@@ -8,6 +8,9 @@ import { arrowUpRight } from "solid-heroicons/solid-mini"
  * functionality. This component automatically sets the target attribute to
  * blank for external navigation and adds an icon indicating that the link is to
  * an external site.
+ *
+ * TODO:
+ * - Fix `activeClass` not working for some reason.
  */
 export default function DynamicLink(props: DynamicLinkProps) {
 	props = mergeProps({ externalIcon: true }, props)
@@ -37,7 +40,7 @@ export default function DynamicLink(props: DynamicLinkProps) {
 	)
 }
 
-/*
+/**
  * Extend the `@solidjs/router` `A` component props.
  */
 interface DynamicLinkProps extends AnchorProps {

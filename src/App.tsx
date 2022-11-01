@@ -10,9 +10,9 @@ import Wiki from "./pages/Wiki"
  */
 export default function App() {
 	return (
-		<>	
+		<>
 			<Navigation />
-			<div class="mt-28">
+			<div class="mt-[5.6rem]">
 				<Routes>
 					<Route path="/" component={Home} />
 					<Route path="/projects" component={Projects} />
