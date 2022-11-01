@@ -2,7 +2,7 @@ import { Icon } from "solid-heroicons"
 import { createSignal, Show } from "solid-js"
 
 import DynamicLink from "./DynamicLink"
-import Button from "./button"
+import Button from "./Button"
 import {
 	ellipsisHorizontal,
 	ellipsisVertical
