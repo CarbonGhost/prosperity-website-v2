@@ -4,7 +4,11 @@ import solidPlugin from "vite-plugin-solid"
 export default defineConfig({
 	plugins: [solidPlugin()],
 	server: {
-		port: 7200
+		port: 7200,
+		strictPort: true,
+		hmr: {
+			clientPort: 7200
+		}
 	},
 	build: {
 		target: "esnext"
