@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<>
 			<div class="flex h-[52rem] standard-width">
-				<div class="h-96 w-1/2 flex-col self-center">
+				<div class="h-96 md:w-2/3 lg:w-1/2 flex-col self-center">
 					<header class="text-6xl font-bold font-display text-zinc-200 mb-4">
 						This is Prosperity.
 					</header>
@@ -35,7 +35,7 @@ export default function Home() {
 					<header class="text-3xl font-bold font-display text-zinc-200 mb-4 text-center">
 						Expanding The Minds Of Engineers.
 					</header>
-					<p class="w-3/4 text-center mx-auto">
+					<p class="lg:w-3/4 text-center mx-auto">
 						Prosperity aims to expand the minds of Redstone
 						engineers by carefully utilizing server-side mods like
 						Carpet to open up new possibilities. If you want to
@@ -50,7 +50,7 @@ export default function Home() {
 					<header class="text-3xl font-bold font-display text-zinc-200 mb-4 text-center">
 						An Architect's Playground.
 					</header>
-					<p class="w-3/4 text-center mx-auto">
+					<p class="lg:w-3/4 text-center mx-auto">
 						If you're interested in building then this is the place
 						to be. With more farmable items and a technical
 						community you can expand your ambitions of scale and the
@@ -66,7 +66,7 @@ export default function Home() {
 					<header class="text-3xl font-bold font-display text-zinc-200 mb-4 text-center">
 						Community Focused.
 					</header>
-					<p class="w-3/4 text-center mx-auto">
+					<p class="lg:w-3/4 text-center mx-auto">
 						The importance of a community to a server can't be
 						understated. Prosperity has a welcoming and talented
 						community of people from all walks of life. While the
@@ -85,7 +85,7 @@ export default function Home() {
 				</div>
 			</div>
 			<div class="standard-width py-12">
-				<div class="grid grid-cols-2 gap-12">
+				<div class="md:grid md:grid-cols-2 gap-12">
 					<div>
 						<header class="text-3xl font-bold font-display text-zinc-200 mb-4">
 							Fast and Reliable.

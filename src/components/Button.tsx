@@ -1,22 +1,22 @@
-import { JSXElement, splitProps } from "solid-js"
+import { JSXElement, mergeProps, splitProps } from "solid-js"
 import { JSX } from "solid-js/jsx-runtime"
 
 /**
  * Standard button component which extends the functionality of the HTML button.
  *
  * TODO:
- * - Fix props.
+ * - Fix the way default classes work.
  */
 export default function Button(props: ButtonProps) {
+	props = mergeProps(
+		{
+			class: "bg-zinc-800 border-2 border-amber-400 text-amber-400 px-10 py-1.5 rounded-md shadow-amber-400/20 hover:shadow-amber-400/40 shadow-md font-semibold duration-150"
+		},
+		props
+	)
 	const [local, buttonProps] = splitProps(props, ["children"])
 
-	return (
-		<button
-			{...buttonProps}
-			class="bg-zinc-800 border-2 border-amber-400 text-amber-400 px-10 py-1.5 rounded-md shadow-amber-400/20 shadow-md font-semibold">
-			{local.children}
-		</button>
-	)
+	return <button {...buttonProps}>{local.children}</button>
 }
 
 /**
