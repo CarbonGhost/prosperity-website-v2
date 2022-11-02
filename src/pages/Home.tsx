@@ -8,12 +8,12 @@ export default function Home() {
 	return (
 		<>
 			{/* Section #1: Headline */}
-			<div class="h-[80vh] max-h-[2048px] flex main-background">
+			<div class="h-[80vh] max-h-[2048px] flex main-background bg-cover 2xl:bg-auto">
 				<div class="standard-width flex-col self-center">
 					<header class="font-display text-zinc-200 text-6xl font-bold text-center">
 						This is Prosperity.
 					</header>
-					<p class="w-5/6 max-w-5xl mx-auto mt-3 mb-10 text-center">
+					<p class="md:w-5/6 max-w-5xl mx-auto mt-3 mb-10 text-center">
 						Prosperity is a survival-multiplayer server focused on
 						bringing skilled builders and technical players together
 						to make the most out ofv Minecraft. If you're interested
@@ -32,9 +32,9 @@ export default function Home() {
 				</div>
 			</div>
 			{/* Section #2 */}
-			<div class="bg-zinc-700 border-zinc-500 drop-shadow-lg flex py-20 -skew-y-3 border-t border-b">
+			<div class="bg-zinc-700 border-zinc-500 drop-shadow-lg -skew-y-2 flex py-20 border-t border-b">
 				{/* Grid container */}
-				<div class="standard-width gap-y-10 lg:grid lg:grid-cols-2 space-y-8 antialiased skew-y-3">
+				<div class="standard-width gap-y-10 lg:grid lg:grid-cols-2 skew-y-2 space-y-8 antialiased">
 					<div>
 						<header class="text-zinc-200 font-display mt-4 text-4xl font-bold">
 							Expanding the Minds of Engineers.
@@ -50,7 +50,7 @@ export default function Home() {
 							already, this server has been the birthplace for
 							several new advances in item tech and more.
 						</p>
-						<header class="text-zinc-200 font-display border-amber-400 pl-4 text-xl font-bold border-l-2">
+						<header class="text-zinc-200 font-display border-amber-400 pl-4 text-xl font-bold border-l">
 							Tech Without Compromises.
 						</header>
 						<p class="mt-2">
@@ -81,7 +81,7 @@ export default function Home() {
 							contribute to. Namely these are our server museum
 							project, cyberpunk city project, and spawn build.
 						</p>
-						<header class="text-zinc-200 font-display border-amber-400 pl-4 text-xl font-bold border-l-2">
+						<header class="text-zinc-200 font-display border-amber-400 pl-4 text-xl font-bold border-l">
 							Collaboration Made Easy.
 						</header>
 						<p class="mt-2">
@@ -99,7 +99,7 @@ export default function Home() {
 			{/* Section #3 */}
 			<div class="tech-background my-32">
 				<div class="standard-width">
-					<div class="text-amber-400 button-background border-amber-400 shadow-amber-400/30 lg:w-2/3 lg:max-w-3xl px-10 py-10 mx-auto border rounded-md shadow-lg">
+					<div class="text-amber-400 button-background border-amber-400 shadow-amber-400/20 lg:w-2/3 lg:max-w-3xl px-10 py-10 mx-auto border rounded-md shadow-lg">
 						<header class="font-display text-xl font-bold">
 							Members say...
 						</header>
@@ -139,7 +139,7 @@ export default function Home() {
 				</p>
 				<div class="gap-x-10 lg:grid lg:grid-cols-2 lg:space-y-0 space-y-8">
 					<div>
-						<header class="text-zinc-200 font-display border-amber-400 pl-4 text-xl font-bold border-l-2">
+						<header class="text-zinc-200 font-display border-amber-400 pl-4 text-xl font-bold border-l">
 							A Server for Everyone.
 						</header>
 						<p class="mt-2">
@@ -154,7 +154,7 @@ export default function Home() {
 						</p>
 					</div>
 					<div>
-						<header class="text-zinc-200 font-display border-amber-400 pl-4 text-xl font-bold border-l-2">
+						<header class="text-zinc-200 font-display border-amber-400 pl-4 text-xl font-bold border-l">
 							Accountable Administration.
 						</header>
 						<p class="mt-2">

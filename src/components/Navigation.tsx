@@ -1,7 +1,8 @@
 import { Icon } from "solid-heroicons"
 import {
 	ellipsisHorizontal,
-	ellipsisVertical
+	ellipsisVertical,
+	xMark
 } from "solid-heroicons/solid-mini"
 import { createSignal, Show } from "solid-js"
 
@@ -27,8 +28,12 @@ export default function Navigation() {
 
 	return (
 		<>
-			<MdNavigation links={links} />
-			<SmNavigation links={links} />
+			<div class="md:block hidden">
+				<MdNavigation links={links} />
+			</div>
+			<div class="md:hidden block">
+				<SmNavigation links={links} />
+			</div>
 		</>
 	)
 }
@@ -40,20 +45,20 @@ function MdNavigation(props: {
 	links: { displayName: string; href: string }[]
 }) {
 	return (
-		<div class="z-50 select-none border-b border-zinc-700 hidden md:flex py-6 self-center fixed top-0 left-0 right-0 bg-zinc-800/30 backdrop-blur-sm">
-			<div class="standard-width flex self-center">
-				<div class="w-10 h-10 self-center bg-amber-400 shrink-0 rounded" />
-				<span class="justify-center w-full flex gap-4 self-center font-semibold">
+		<div class="top-6 fixed z-50 flex w-full mx-auto select-none">
+			<div class="standard-width flex justify-between">
+				<div class="invisible lg:visible w-[34.4px] h-[34.4px] self-center bg-amber-400 shrink-0 rounded shadow shadow-amber-400/20" />
+				<div class="md:absolute md:block hidden mx-auto lg:left-0 lg:right-0 py-1.5 bg-zinc-700 border border-zinc-500 w-fit rounded-md drop-shadow-lg">
 					{props.links.map((i) => (
 						<DynamicLink
-							class="text-zinc-200 px-6 py-1.5 self-center hover:no-underline"
+							class="text-zinc-200 px-6 py-1.5 self-center hover:no-underline text-center transform hover:text-zinc-300 duration-150"
 							href={i.href}
-							activeClass="border rounded bg-zinc-700 border-zinc-500"
-							end={true}>
+							end={true}
+							activeClass="underline decoration-zinc-500">
 							{i.displayName}
 						</DynamicLink>
 					))}
-				</span>
+				</div>
 				<Button>Join</Button>
 			</div>
 		</div>
@@ -66,34 +71,47 @@ function SmNavigation(props: {
 	const [isVisible, setIsVisible] = createSignal(false)
 
 	return (
-		<div class="z-50 select-none border-b border-zinc-700 flex-col md:hidden py-6 self-center fixed top-0 left-0 right-0 bg-zinc-800/30 backdrop-blur-md">
-			<div class="standard-width flex justify-between">
-				<div class="w-10 h-10 self-center bg-amber-400 shrink-0 rounded-md" />
-				<button
-					onClick={() =>
-						isVisible() ? setIsVisible(false) : setIsVisible(true)
-					}>
-					<Icon
-						path={
-							isVisible() ? ellipsisHorizontal : ellipsisVertical
-						}
-						class="inline w-6 h-6 self-center"
-					/>
-				</button>
+		<>
+			<div class="top-6 fixed z-50 flex w-full mx-auto select-none">
+				<div class="standard-width flex justify-between">
+					<button
+						class="py-1.5 px-3 grow-0 shrink-0 bg-zinc-700 border border-zinc-500 w-fit rounded-md drop-shadow-lg"
+						onClick={() =>
+							isVisible()
+								? setIsVisible(false)
+								: setIsVisible(true)
+						}>
+						{!isVisible() ? (
+							<Icon
+								path={ellipsisVertical}
+								class="self-center inline w-4 h-4 align-middle"
+							/>
+						) : (
+							<Icon
+								path={xMark}
+								class="self-center inline w-4 h-4 align-middle"
+							/>
+						)}
+					</button>
+					<Button>Join</Button>
+				</div>
 			</div>
 			<Show when={isVisible()}>
-				<div class="grid standard-width w-full mt-6 gap-y-6 justify-end text-right">
-					{props.links.map((i) => (
-						<DynamicLink
-							class="text-zinc-200 w-[100%] px-6 py-1.5 self-center hover:no-underline"
-							href={i.href}
-							activeClass="border rounded bg-zinc-700 border-zinc-500"
-							end={true}>
-							{i.displayName}
-						</DynamicLink>
-					))}
+				<div class="bg-zinc-700 drop-shadow-lg w-2/5 border-zinc-500 fixed top-0 left-0 z-40 h-screen border-r">
+					<div class="mt-[5.5rem] mx-10 grid gap-y-4">
+						{props.links.map((i) => (
+							<DynamicLink
+								class="text-zinc-200 hover:no-underline hover:text-zinc-300 duration-150 transform"
+								href={i.href}
+								end={true}
+								activeClass="underline decoration-zinc-500"
+								onClick={() => setIsVisible(false)}>
+								{i.displayName}
+							</DynamicLink>
+						))}
+					</div>
 				</div>
 			</Show>
-		</div>
+		</>
 	)
 }

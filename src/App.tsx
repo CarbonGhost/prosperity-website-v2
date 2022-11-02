@@ -12,7 +12,7 @@ export default function App() {
 	return (
 		<>
 			<Navigation />
-			<div class="mt-[5.6rem]">
+			<div class="mt-[5.5rem]">
 				<Routes>
 					<Route path="/" component={Home} />
 					<Route path="/projects" component={Projects} />
