@@ -1,34 +1,41 @@
-## Usage
+# Prosperity Website v2
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+This is a rewrite of the original [Prosperity website](https://prosperitymc.net)
+in Solid.js. Among other features, this rewrite is focused on overall better UI
+and UX.
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+[Development Deployment](https://prosperity-website-v2-carbonghost.vercel.app)
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+## Planned Features
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+- [ ] Fancy landing page.
+- [ ] More art and graphics.
+- [ ] Project gallery page.
+- [ ] Markdown-based wiki pages.
+- [ ] Page showing server news.
+- [ ] Move to another hosting service.
 
-## Available Scripts
+### Maybe
 
-In the project directory, you can run:
+- [ ] SSR.
+- [ ] Contact form.
+- [ ] Integration with Grafna stats.
+- [ ] Something to do with 3D...
 
-### `npm dev` or `npm start`
+## Development
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If you wish to run this project locally, follow these instructions:
 
-The page will reload if you make edits.<br>
+1. Download Node and npm from [here]().
+2. Clone the repository.
+3. Open the repository directory in your terminal and run `npm i`.
+4. Start the development server with `npm run dev`.
+5. Open http://localhost:7200.
 
-### `npm run build`
+Code style is enforced by the `.prettierrc` file, if you're using Visual Studio
+code then it will have been automatically suggested when you open the project.
+In addition to this the Headwind extension can be used to automatically sort
+Tailwind classes.
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+Build the project with `npm run build`. The site will be optimized and compiled
+to the `/dist` directory.
