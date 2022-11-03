@@ -1,22 +1,11 @@
 import { Icon } from "solid-heroicons"
-import {
-	ellipsisHorizontal,
-	ellipsisVertical,
-	xMark
-} from "solid-heroicons/solid-mini"
-import { createSignal, Show } from "solid-js"
+import { ellipsisVertical, xMark } from "solid-heroicons/solid-mini"
+import { createSignal, JSXElement, Show } from "solid-js"
 
 import DynamicLink from "./DynamicLink"
 import Button from "./Button"
 
-/**
- * Site navigation bar component, aligned to the top of the screen.
- *
- * TODO:
- * - Mobile version.
- * - Routing.
- */
-export default function Navigation() {
+export default function Navigation(): JSXElement {
 	// The links shown on the navigation bar.
 	const links: { displayName: string; href: string }[] = [
 		{ displayName: "Home", href: "/" },
@@ -65,6 +54,9 @@ function MdNavigation(props: {
 	)
 }
 
+/**
+ * Navigation component used below the `sm` breakpoint.
+ */
 function SmNavigation(props: {
 	links: { displayName: string; href: string }[]
 }) {
@@ -97,7 +89,7 @@ function SmNavigation(props: {
 				</div>
 			</div>
 			<Show when={isVisible()}>
-				<div class="bg-zinc-700 drop-shadow-lg w-2/5 border-zinc-500 fixed top-0 left-0 z-40 h-screen border-r">
+				<div class="bg-zinc-700 drop-shadow-lg border-zinc-500 fixed top-0 left-0 z-40 w-56 h-screen border-r">
 					<div class="mt-[5.5rem] mx-10 grid gap-y-4">
 						{props.links.map((i) => (
 							<DynamicLink

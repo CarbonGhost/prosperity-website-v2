@@ -2,23 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* base ***********************************************************************/
-
 body {
-	@apply bg-zinc-800 text-zinc-300;
+	@apply bg-zinc-800 text-zinc-300 selection:bg-[#3b3523];
 }
 
 a {
 	@apply hover:underline text-amber-400;
 }
 
-/* classes ********************************************************************/
-
 .standard-width {
 	@apply container px-8 mx-auto;
 }
 
-.main-background {
+.isometric-grid-background {
 	background-image: url("./assets/main-background.svg");
 	background-repeat: no-repeat;
 	background-position: center;
