@@ -184,7 +184,7 @@ function Testimonial(): JSXElement {
 				<section class="standard-width">
 					<div class="text-amber-400 button-background border-amber-400 shadow-amber-400/20 lg:w-2/3 lg:max-w-3xl px-10 py-10 mx-auto border rounded-md shadow-lg">
 						<header class="font-display text-xl font-bold">
-							Members say...
+							BossDaily said say...
 						</header>
 						<p class="mt-6 mb-2">
 							Before I joined Prosperity my life was a mess. I got
@@ -196,10 +196,10 @@ function Testimonial(): JSXElement {
 						<div class="flex justify-end gap-4">
 							<div class="flex-col align-middle">
 								<header class="font-display text-lg font-bold text-right">
-									Anonymous
+									BossDaily
 								</header>
 								<sub class="text-right align-text-top">
-									A Prosperity Member
+									The Greatest Prosperity Member
 								</sub>
 							</div>
 							<div class="bg-amber-400 shrink-0 self-center w-10 h-10 rounded-full" />
