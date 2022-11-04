@@ -10,6 +10,11 @@ a {
 	@apply hover:underline text-amber-400;
 }
 
+article,
+p {
+	@apply space-y-6;
+}
+
 .standard-width {
 	@apply container px-8 mx-auto;
 }
