@@ -1,8 +1,9 @@
 import { defineConfig } from "vite"
-import solidPlugin from "vite-plugin-solid"
+import mdx from "@mdx-js/rollup"
+import solid from "vite-plugin-solid"
 
 export default defineConfig({
-	plugins: [solidPlugin()],
+	plugins: [mdx({ jsxImportSource: "solid-jsx" }), solid()],
 	server: {
 		port: 7200,
 		strictPort: true,
