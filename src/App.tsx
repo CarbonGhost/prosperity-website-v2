@@ -1,10 +1,7 @@
-import { Routes, Route } from "@solidjs/router"
 import { JSXElement } from "solid-js"
 
 import Navigation from "./components/Navigation"
-import Home from "./pages/Home"
-import Projects from "./pages/Projects"
-import Wiki from "./pages/Wiki"
+import AppRoutes from "./AppRoutes"
 
 export default function App(): JSXElement {
 	return (
@@ -15,11 +12,7 @@ export default function App(): JSXElement {
 			{/* Container for router pages. Uses `mt-[5.5rem]` in order to add a
 			margin for the navigation. */}
 			<div class="mt-[5.5rem]">
-				<Routes>
-					<Route path="/" component={Home} />
-					<Route path="/projects" component={Projects} />
-					<Route path="/wiki" component={Wiki} />
-				</Routes>
+				<AppRoutes />
 			</div>
 		</>
 	)

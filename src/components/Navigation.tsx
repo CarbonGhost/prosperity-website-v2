@@ -40,10 +40,10 @@ function MdNavigation(props: {
 				<div class="md:absolute md:block hidden mx-auto lg:left-0 lg:right-0 py-1.5 bg-zinc-700 border border-zinc-500 w-fit rounded-md drop-shadow-lg">
 					{props.links.map((i) => (
 						<DynamicLink
-							class="text-zinc-200 px-6 py-1.5 self-center hover:no-underline text-center transform hover:text-zinc-300 duration-150"
+							class="text-zinc-200 decoration-zinc-500 px-6 py-1.5 self-center text-center transform hover:text-zinc-300 duration-150"
 							href={i.href}
-							end={true}
-							activeClass="underline decoration-zinc-500">
+							end={i.href.includes("wiki") ? false : true}
+							activeClass="underline">
 							{i.displayName}
 						</DynamicLink>
 					))}
