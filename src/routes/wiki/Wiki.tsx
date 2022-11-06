@@ -1,24 +1,15 @@
-import { useParams } from "@solidjs/router"
-import { JSXElement, lazy } from "solid-js"
-import { Suspense } from "solid-js"
+import { useRouteData } from "@solidjs/router"
+import { JSXElement } from "solid-js"
 
 import DynamicLink from "../../components/DynamicLink"
 
 export default function Wiki(): JSXElement {
-	const route = useParams()
-	// The wiki page content. Will navigate to the index page should the route be
-	// invalid.
-	const Content = lazy(() => import(`../../content/${route.page}.mdx`))
+	const data = useRouteData<any>()
 
 	return (
 		<div class="standard-width md:flex md:space-y-0 md:gap-6 space-y-6">
 			<Sidebar />
-			<article class="md:ml-60">
-				{/* Use `Suspense` to wrap the dynamic import from `Content`. */}
-				<Suspense>
-					<Content />
-				</Suspense>
-			</article>
+			<article class="md:ml-60">{data}</article>
 		</div>
 	)
 }
