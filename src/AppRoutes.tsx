@@ -6,7 +6,7 @@ import WikiData from "./routes/wiki/Wiki.data"
 export default function AppRoutes() {
 	return (
 		<Routes>
-			<Route path="/" component={lazy(() => import("./routes/Home"))} />
+			<Route path="/" component={lazy(() => import("./routes/home"))} />
 			<Route
 				path="/projects"
 				component={lazy(() => import("./routes/projects"))}
