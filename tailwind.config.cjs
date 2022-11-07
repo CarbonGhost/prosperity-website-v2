@@ -4,7 +4,8 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: ["Archivo", "ui-sans-serif", "system-ui"],
-			display: ["Inter", "ui-sans-serif", "system-ui"]
+			display: ["Inter", "ui-sans-serif", "system-ui"],
+			mono: ["JetBrains Mono", "ui-monospace", "monosapce"]
 		},
 		colors: {
 			amber: {

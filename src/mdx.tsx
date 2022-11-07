@@ -1,5 +1,6 @@
 import { JSX } from "solid-js/jsx-runtime"
 import { AnchorProps } from "@solidjs/router"
+import { Meta, Title } from "@solidjs/meta"
 
 import DynamicLink from "./components/DynamicLink"
 import Button from "./components/Button"
@@ -11,8 +12,27 @@ type propsFrom<T> = JSX.IntrinsicAttributes & JSX.HTMLAttributes<T>
  * https://mdxjs.com/docs/using-mdx/#components
  */
 export default {
+	// Automatically imported into markdown pages:
 	Button,
-	wrapper: ({ ...rest }) => <article class="space-y-3" {...rest} />,
+	Meta: (props: { title: string; description: string }) => (
+		<>
+			<Meta
+				property="og:title"
+				content={`Prosperity MC | ${props.title}`}
+			/>
+			<Meta property="title" content={`Prosperity MC | ${props.title}`} />
+			<Meta property="og:description" content={props.description} />
+			<Meta property="description" content={props.description} />
+		</>
+	),
+	// Wrapper for the wiki page content:
+	wrapper: ({ ...rest }) => (
+		<>
+			<Meta property="og:type" content="article" />
+			<article class="space-y-3" {...rest} />
+		</>
+	),
+	// Mappings from compiled JSX:
 	h1: (props: propsFrom<HTMLElement>) => (
 		<header
 			class="text-zinc-200 align-baseline space-y-2 text-5xl font-bold"
@@ -53,7 +73,7 @@ export default {
 		<DynamicLink {...props} />
 	),
 	table: (props: propsFrom<HTMLTableElement>) => (
-		// Unfortuentnly can't inline all the classes here... to change go to
+		// Unfortunately can't inline all the classes here... to change go to
 		// `index.css`.
 		<div class="border-zinc-500 border rounded-md">
 			<table class="md-table w-full" {...props} />

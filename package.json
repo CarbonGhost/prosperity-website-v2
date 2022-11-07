@@ -21,6 +21,7 @@
 	},
 	"dependencies": {
 		"@mdx-js/rollup": "^2.1.5",
+		"@solidjs/meta": "^0.28.2",
 		"@solidjs/router": "^0.5.0",
 		"remark-gfm": "^3.0.1",
 		"solid-heroicons": "^3.1.0",
