@@ -10,7 +10,7 @@ export default function Wiki(): JSXElement {
 	return (
 		<div class="standard-width md:flex md:space-y-0 md:gap-6 space-y-6">
 			<Sidebar />
-			<div class="md:ml-60">{data}</div>
+			<article class="md:ml-60">{data}</article>
 		</div>
 	)
 }

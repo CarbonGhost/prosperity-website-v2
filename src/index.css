@@ -10,13 +10,23 @@ a {
 	@apply hover:underline text-amber-400;
 }
 
-article,
-p {
-	@apply space-y-6;
-}
-
 .standard-width {
 	@apply container px-8 mx-auto;
+}
+
+.md-table {
+	@apply min-w-full border-0 table-auto;
+}
+
+.md-table,
+td,
+th {
+	@apply py-1.5 px-4 border-0;
+}
+
+.md-table,
+tr {
+	@apply border-y border-zinc-500 border-x-0 first:border-t-0 last:border-y-0;
 }
 
 .isometric-grid-background {
