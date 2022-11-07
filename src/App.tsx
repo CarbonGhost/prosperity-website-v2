@@ -9,7 +9,6 @@ export default function App(): JSXElement {
 		<>
 			<Title>Prosperity MC</Title>
 			<Meta property="og:title" content="Prosperity MC" />
-			<Meta property="og:image" content="./src/assets/og.png" />
 			<Meta property="og:type" content="website" />
 			{/* Show the navigation on all pages. */}
 			<Navigation />
