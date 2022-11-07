@@ -8,10 +8,9 @@ export default function App(): JSXElement {
 		<>
 			{/* Show the navigation on all pages. */}
 			<Navigation />
-
 			{/* Container for router pages. Uses `mt-[5.5rem]` in order to add a
 			margin for the navigation. */}
-			<div class="mt-[5.5rem]">
+			<div class="my-[5.5rem]">
 				<AppRoutes />
 			</div>
 		</>

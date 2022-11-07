@@ -37,7 +37,7 @@ function MdNavigation(props: {
 		<div class="top-6 fixed z-50 flex w-full mx-auto select-none">
 			<div class="standard-width flex justify-between">
 				<div class="invisible lg:visible w-[34.4px] h-[34.4px] self-center bg-amber-400 shrink-0 rounded shadow shadow-amber-400/20" />
-				<div class="md:absolute md:block hidden mx-auto lg:left-0 lg:right-0 py-1.5 bg-zinc-700 border border-zinc-500 w-fit rounded-md drop-shadow-lg">
+				<div class="md:absolute md:block hidden mx-auto lg:left-0 lg:right-0 py-1.5 bg-zinc-700 border border-zinc-500 w-fit rounded-md drop-shadow-lg divide-x divide-zinc-500">
 					{props.links.map((i) => (
 						<DynamicLink
 							class="text-zinc-200 decoration-zinc-500 px-6 py-1.5 self-center text-center transform hover:text-zinc-300 duration-150"

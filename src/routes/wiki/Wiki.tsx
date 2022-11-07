@@ -2,58 +2,21 @@ import { useRouteData } from "@solidjs/router"
 import { JSXElement } from "solid-js"
 
 import DynamicLink from "../../components/DynamicLink"
+import config from "../../content/wiki/config"
 
 export default function Wiki(): JSXElement {
-	const data = useRouteData<any>()
+	const data = useRouteData<JSXElement>()
 
 	return (
 		<div class="standard-width md:flex md:space-y-0 md:gap-6 space-y-6">
 			<Sidebar />
-			<article class="md:ml-60">{data}</article>
+			<div class="md:ml-60">{data}</div>
 		</div>
 	)
 }
 
 function Sidebar(): JSXElement {
-	const links: {
-		category: string
-		subLinks: { displayName: string; href: string }[]
-	}[] = [
-		{
-			category: "",
-			subLinks: [{ displayName: "Index", href: "/wiki/index" }]
-		},
-		{
-			category: "Rules & Administration",
-			subLinks: [
-				{
-					displayName: "Admin Overview",
-					href: "/wiki/administration-overrview"
-				},
-				{
-					displayName: "Allowed Mods",
-					href: "/wiki/allowed-mods"
-				},
-				{
-					displayName: "Server Rules",
-					href: "/wiki/rules"
-				}
-			]
-		},
-		{
-			category: "Guides",
-			subLinks: [
-				{
-					displayName: "New Player Guide",
-					href: "/wiki/new-player-guide"
-				},
-				{
-					displayName: "OptiFine Alternatives",
-					href: "/wiki/optifine-alternatives"
-				}
-			]
-		}
-	]
+	const links = config
 
 	return (
 		<div class="bg-zinc-700 h-min md:fixed border-zinc-500 w-in px-6 border rounded-md shadow-lg">
@@ -61,7 +24,7 @@ function Sidebar(): JSXElement {
 				<>
 					<header class="text-xs">{i.category}</header>
 					<section class="grid">
-						{i.subLinks.sort().map((i2) => (
+						{i.links.sort().map((i2) => (
 							<DynamicLink
 								class="text-zinc-200 decoration-zinc-500 py-1.5 self-center transform hover:text-zinc-300 duration-150"
 								href={i2.href}
